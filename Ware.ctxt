@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.params=pMhd\ pName
+comment0.target=Ware(int,\ java.lang.String)
+comment0.text=Ware\ (public)\ **********************************************
+comment1.params=
+comment1.target=int\ getMhd()
+comment1.text=getMhd\ (public)\ ********************************************
+comment2.params=
+comment2.target=java.lang.String\ getName()
+comment2.text=getName\ (public)\ *******************************************
+comment3.params=pName
+comment3.target=void\ setName(java.lang.String)
+numComments=4
