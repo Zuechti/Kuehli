@@ -1,10 +1,10 @@
 object gui: TFGUIForm
-  Left = 307
-  Top = 0
+  Left = 15
+  Top = 46
   BorderIcons = [biSystemMenu]
   Caption = 'gui'
-  ClientHeight = 637
-  ClientWidth = 795
+  ClientHeight = 389
+  ClientWidth = 430
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -24,12 +24,12 @@ object gui: TFGUIForm
   Background = clBtnFace
   PixelsPerInch = 96
   TextHeight = 13
-  object jButton1: TJButton
+  object bRemove: TJButton
     Tag = 4
-    Left = 16
-    Top = 16
-    Width = 161
-    Height = 41
+    Left = 200
+    Top = 88
+    Width = 113
+    Height = 33
     Hint = 'jButton1'
     Foreground = 3355443
     Background = 15658734
@@ -38,8 +38,8 @@ object gui: TFGUIForm
     Font.Height = -12
     Font.Name = 'Dialog'
     Font.Style = [fsBold]
-    actionPerformed = 'jButton1_ActionPerformed'
-    Text = 'jButton1'
+    actionPerformed = 'bRemove_ActionPerformed'
+    Text = 'Remove'
     Mnemonic = 0
     DisplayedMnemonicIndex = 0
     Selected = False
@@ -68,12 +68,50 @@ object gui: TFGUIForm
     Border.MatteBottom = 0
     Border.MatteRight = 0
   end
-  object jButton2: TJButton
+  object tName: TJTextField
+    Tag = 2
+    Left = 200
+    Top = 8
+    Width = 225
+    Height = 33
+    Cursor = crIBeam
+    Hint = 'jTextField1'
+    Foreground = 3355443
+    Background = clWhite
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Dialog'
+    Font.Style = []
+    ToolTipText = 'Name of Object'
+    HorizontalAlignment = CENTER
+    Editable = True
+  end
+  object tFresh: TJTextField
+    Tag = 2
+    Left = 200
+    Top = 48
+    Width = 225
+    Height = 33
+    Cursor = crIBeam
+    Hint = 'jTextField2'
+    Foreground = 3355443
+    Background = clWhite
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Dialog'
+    Font.Style = []
+    ToolTipText = 'Freshness Date'
+    HorizontalAlignment = CENTER
+    Editable = True
+  end
+  object bAdd: TJButton
     Tag = 4
-    Left = 16
-    Top = 56
-    Width = 161
-    Height = 41
+    Left = 312
+    Top = 88
+    Width = 113
+    Height = 33
     Hint = 'jButton2'
     Foreground = 3355443
     Background = 15658734
@@ -82,8 +120,8 @@ object gui: TFGUIForm
     Font.Height = -12
     Font.Name = 'Dialog'
     Font.Style = [fsBold]
-    actionPerformed = 'jButton2_ActionPerformed'
-    Text = 'jButton2'
+    actionPerformed = 'bAdd_ActionPerformed'
+    Text = 'Add'
     Mnemonic = 0
     DisplayedMnemonicIndex = 0
     Selected = False
@@ -112,12 +150,12 @@ object gui: TFGUIForm
     Border.MatteBottom = 0
     Border.MatteRight = 0
   end
-  object jButton3: TJButton
+  object bOprn: TJButton
     Tag = 4
-    Left = 16
-    Top = 96
-    Width = 161
-    Height = 41
+    Left = 8
+    Top = 8
+    Width = 185
+    Height = 33
     Hint = 'jButton3'
     Foreground = 3355443
     Background = 15658734
@@ -126,8 +164,9 @@ object gui: TFGUIForm
     Font.Height = -12
     Font.Name = 'Dialog'
     Font.Style = [fsBold]
-    actionPerformed = 'jButton3_ActionPerformed'
-    Text = 'jButton3'
+    actionPerformed = 'bOprn_ActionPerformed'
+    ToolTipText = 'Door is currently closed'
+    Text = 'Open Door'
     Mnemonic = 0
     DisplayedMnemonicIndex = 0
     Selected = False
@@ -158,10 +197,10 @@ object gui: TFGUIForm
   end
   object jButton4: TJButton
     Tag = 4
-    Left = 16
-    Top = 136
-    Width = 161
-    Height = 41
+    Left = 8
+    Top = 48
+    Width = 185
+    Height = 33
     Hint = 'jButton4'
     Foreground = 3355443
     Background = 15658734
@@ -199,5 +238,27 @@ object gui: TFGUIForm
     Border.MatteLeft = 0
     Border.MatteBottom = 0
     Border.MatteRight = 0
+  end
+  object jTextArea1: TJTextArea
+    Tag = 3
+    Left = 200
+    Top = 128
+    Width = 225
+    Height = 257
+    Cursor = crIBeam
+    Hint = 'jTextArea1'
+    Foreground = 3355443
+    Background = clWhite
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Dialog'
+    Font.Style = [fsBold]
+    LineWrap = False
+    HorizontalScrollBarPolicy = AS_NEEDED
+    VerticalScrollBarPolicy = AS_NEEDED
+    WrapStyleWord = False
+    TabSize = 8
+    Editable = True
   end
 end

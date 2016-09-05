@@ -20,8 +20,6 @@ public class gui extends JFrame {
     private JButton bOpen = new JButton();
     private JButton jButton4 = new JButton();
     private Fridge f = new Fridge(20);
-    private JTextArea jTextArea1 = new JTextArea("");
-    private JScrollPane jTextArea1ScrollPane = new JScrollPane(jTextArea1);
     // Ende Attribute
 
     public gui() { 
@@ -29,7 +27,7 @@ public class gui extends JFrame {
         super("Fridgo");
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         int frameWidth = 446; 
-        int frameHeight = 427;
+        int frameHeight = 167;
         setSize(frameWidth, frameHeight);
         Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
         int x = (d.width - getSize().width) / 2;
@@ -87,8 +85,6 @@ public class gui extends JFrame {
                 }
             });
         cp.add(jButton4);
-        jTextArea1ScrollPane.setBounds(200, 128, 225, 257);
-        cp.add(jTextArea1ScrollPane);
         // Ende Komponenten
 
         setVisible(true);
@@ -105,7 +101,7 @@ public class gui extends JFrame {
     } // end of bRemove_ActionPerformed
 
     public void bAdd_ActionPerformed(ActionEvent evt) {
-        System.out.println("hi"+"\n"+"20");
+
     } // end of bAdd_ActionPerformed
 
     public void bOpen_ActionPerformed(ActionEvent evt) {
@@ -117,7 +113,7 @@ public class gui extends JFrame {
         else{
             bOpen.setText("Open Door");
         }
-
+        
     } // end of bOpen_ActionPerformed
     public void jButton4_ActionPerformed(ActionEvent evt) {
     } // end of jButton4_ActionPerformed
