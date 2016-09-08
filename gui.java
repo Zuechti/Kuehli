@@ -20,8 +20,8 @@ public class gui extends JFrame {
     private JButton bOpen = new JButton();
     private JButton jButton4 = new JButton();
     private Fridge f = new Fridge(20);
-    private JTextArea jTextArea1 = new JTextArea("");
-    private JScrollPane jTextArea1ScrollPane = new JScrollPane(jTextArea1);
+    private JTextArea jta = new JTextArea("");
+    private JScrollPane jtaScrollPane = new JScrollPane(jta);
     // Ende Attribute
 
     public gui() { 
@@ -29,7 +29,7 @@ public class gui extends JFrame {
         super("Fridgo");
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         int frameWidth = 446; 
-        int frameHeight = 427;
+        int frameHeight = 525;
         setSize(frameWidth, frameHeight);
         Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
         int x = (d.width - getSize().width) / 2;
@@ -87,8 +87,9 @@ public class gui extends JFrame {
                 }
             });
         cp.add(jButton4);
-        jTextArea1ScrollPane.setBounds(200, 128, 225, 257);
-        cp.add(jTextArea1ScrollPane);
+        jtaScrollPane.setBounds(200, 128, 225, 257);
+        jta.setEditable(false);
+        cp.add(jtaScrollPane);
         // Ende Komponenten
 
         setVisible(true);
@@ -105,7 +106,14 @@ public class gui extends JFrame {
     } // end of bRemove_ActionPerformed
 
     public void bAdd_ActionPerformed(ActionEvent evt) {
-        System.out.println("hi"+"\n"+"20");
+        if(f.isOpen()){
+            f.addWare(Integer.parseInt(tFresh.getText()), tName.getText());
+
+            updateText();
+        }
+        else{
+            jta.setText("Der Kühlschrank ist zu. BAKA");
+        }
     } // end of bAdd_ActionPerformed
 
     public void bOpen_ActionPerformed(ActionEvent evt) {
@@ -113,13 +121,32 @@ public class gui extends JFrame {
         f.invertLight();
         if(f.isOpen()){
             bOpen.setText("Close Door");
+            updateText();
         }
         else{
             bOpen.setText("Open Door");
+            jta.setText("");
         }
-
     } // end of bOpen_ActionPerformed
     public void jButton4_ActionPerformed(ActionEvent evt) {
     } // end of jButton4_ActionPerformed
+    public void updateText(){
+        jta.setText("");
+        for(int i=0;i<f.getStorageLength();i++){
+
+            int y=i+1;
+            if(f.getStorage(i)!=null){
+                jta.setText(jta.getText()+y+": "+f.getStorage(i).getName()+" "+f.getStorage(i).getMhd()+"\n");
+            }
+            else{
+                jta.setText(jta.getText()+""+y+": "+"empty"+"\n");
+            }
+        }
+    }
     // Ende Methoden
 } // end of class gui
+
+
+
+
+

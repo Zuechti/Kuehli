@@ -3,7 +3,7 @@ object gui: TFGUIForm
   Top = 46
   BorderIcons = [biSystemMenu]
   Caption = 'gui'
-  ClientHeight = 389
+  ClientHeight = 487
   ClientWidth = 430
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -14,7 +14,9 @@ object gui: TFGUIForm
   FormStyle = fsMDIChild
   OldCreateOrder = True
   Position = poDesigned
+  ShowHint = True
   Visible = True
+  WindowState = wsMaximized
   OnClose = FormClose
   OnCloseQuery = FormCloseQuery
   OnResize = FormResize
@@ -32,7 +34,7 @@ object gui: TFGUIForm
     Height = 33
     Hint = 'jButton1'
     Foreground = 3355443
-    Background = 15658734
+    Background = clWhite
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -12
@@ -114,7 +116,7 @@ object gui: TFGUIForm
     Height = 33
     Hint = 'jButton2'
     Foreground = 3355443
-    Background = 15658734
+    Background = clWhite
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -12
@@ -158,7 +160,7 @@ object gui: TFGUIForm
     Height = 33
     Hint = 'jButton3'
     Foreground = 3355443
-    Background = 15658734
+    Background = clWhite
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -12
@@ -203,7 +205,7 @@ object gui: TFGUIForm
     Height = 33
     Hint = 'jButton4'
     Foreground = 3355443
-    Background = 15658734
+    Background = clWhite
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -12
@@ -244,7 +246,7 @@ object gui: TFGUIForm
     Left = 200
     Top = 128
     Width = 225
-    Height = 257
+    Height = 353
     Cursor = crIBeam
     Hint = 'jTextArea1'
     Foreground = 3355443
@@ -259,6 +261,6 @@ object gui: TFGUIForm
     VerticalScrollBarPolicy = AS_NEEDED
     WrapStyleWord = False
     TabSize = 8
-    Editable = True
+    Editable = False
   end
 end

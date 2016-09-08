@@ -110,4 +110,7 @@ public class Fridge {
         }
         return y;
     }
+    public int getStorageLength(){
+        return storage.length;
+    }
 }
